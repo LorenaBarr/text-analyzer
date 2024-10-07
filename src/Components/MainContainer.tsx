@@ -68,10 +68,10 @@ const MainContainer: React.FC = () => {
     <div className="main-container">
       <h2>Text Analyzer</h2>
       <p>
-        Utilidad de software libre que permite encontrar las frases y
-        frecuencias de palabras más frecuentes. Admite textos en idiomas
-        distintos del inglés. También cuenta el número de palabras, caracteres,
-        oraciones y sílabas, y calcula la densidad léxica.
+        Utiliza este analizador para obtener estadísticas de tu texto en tiempo
+        real. Cuenta palabras, caracteres (con y sin espacios), números y su
+        suma total. También calcula la longitud media de las palabras. Ingresa
+        tu texto para comenzar.
       </p>
       <textarea
         className="text-input"

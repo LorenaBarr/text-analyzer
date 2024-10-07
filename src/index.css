@@ -38,25 +38,23 @@ body {
   padding: 10px;
   margin-bottom: 20px;
   border-radius: 8px;
-  border: 3px solid;
   background-color: #ffffff; /* Fondo blanco del input */
   font-size: 1rem;
   color: #000000;
-  animation: borderAnimation 3s infinite; /* Animación en el borde */
+  border: 3px solid;
+  animation: changeBorderColor 3s infinite; /* Animación en el borde */
 }
 
-@keyframes borderAnimation {
+/* Animación que cambia los colores del borde del input */
+@keyframes changeBorderColor {
   0% {
-    border-color: #ff66c1; /* Fucsia */
+    border-color: #D4145A; /* Color inicial */
   }
-  33% {
-    border-color: #bd95e4; /* Morado */
-  }
-  66% {
-    border-color: #fa9fd8; /* Rosa */
+  50% {
+    border-color: #DD58D6; /* Cambio a morado */
   }
   100% {
-    border-color: #ff66c1; /* Fucsia */
+    border-color: #97FEED; /* Cambio a azul */
   }
 }
 
