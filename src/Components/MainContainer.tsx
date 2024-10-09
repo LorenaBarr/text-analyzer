@@ -41,13 +41,13 @@ const MainContainer: React.FC = () => {
     averageWordLength: string;
   } | null>(null);
 
-  const handleProcessText = () => {
-    const wordCountResult = wordCount(text);
-    const charCountResult = charCount(text);
-    const charCountWithoutSpacesResult = charCountWithoutSpaces(text);
-    const numberCountResult = numberCount(text);
-    const sumNumbersResult = sumNumbers(text);
-    const averageWordLengthResult = averageWordLength(text);
+  const handleProcessText = (newText: string) => {
+    const wordCountResult = wordCount(newText);
+    const charCountResult = charCount(newText);
+    const charCountWithoutSpacesResult = charCountWithoutSpaces(newText);
+    const numberCountResult = numberCount(newText);
+    const sumNumbersResult = sumNumbers(newText);
+    const averageWordLengthResult = averageWordLength(newText);
 
     setMetrics({
       wordCount: wordCountResult,
@@ -79,12 +79,9 @@ const MainContainer: React.FC = () => {
         value={text}
         onChange={(e) => {
           setText(e.target.value);
-          handleProcessText(); // Procesar el texto en tiempo real
+          handleProcessText(e.target.value); // Procesar el texto en tiempo real
         }}
       />
-      <button className="process-button" onClick={handleProcessText}>
-        Procesar texto
-      </button>
       <button className="clear-button" onClick={handleClearText}>
         Limpiar texto
       </button>
